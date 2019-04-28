@@ -1,0 +1,17 @@
+<h2>{{hotel.name}}</h2>
+<span *ngIf="!hotel.available">Not available for booking</span>
+<button class="btn-primary btn" *ngIf="hotel.available && isAuthenticated()" (click)="book(hotel.id)">Book</button>
+
+<div class="row">
+    <div class="hotel-image col-md-3">
+        <img [src]="hotel.image">
+    </div>
+    <div class="hotel-desc col-md-7">
+      {{hotel.description}}
+    </div>
+    <div class="col-md-2">
+      Positive: {{hotel.positiveReviews}}
+      <br/>
+      Negative: {{hotel.negativeReviews}}
+    </div>
+</div>

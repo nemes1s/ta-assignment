@@ -1,0 +1,15 @@
+.hotel {
+  border-bottom: 1px solid black;
+  padding-bottom: 20px;
+}
+.hotel-name {
+  font-weight: bold;
+  font-size: 2em
+}
+
+.hotel-image {
+  img {
+    object-fit: cover;
+    max-width: 100%;
+  }
+}

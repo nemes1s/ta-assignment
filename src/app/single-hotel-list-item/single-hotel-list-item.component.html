@@ -1,0 +1,15 @@
+<li class="row hotel">
+  <div class="hotel-name col-md-12">
+      {{hotel.name}}
+  </div>
+  <div class="hotel-image col-md-3">
+      <img [src]="hotel.image">
+  </div>
+  <div class="hotel-desc col-md-7">
+    {{hotel.description}}
+  </div>
+  <div class="hotel-actions col-md-2">
+    <button class="btn btn-default" routerLink="/hotels/{{hotel.id}}">View</button>
+    <button *ngIf="hotel.available" (click)="book(hotel.id)" class="btn btn-primary" [class.disabled]="!isAuthenticated()">Book</button>
+  </div>
+</li>

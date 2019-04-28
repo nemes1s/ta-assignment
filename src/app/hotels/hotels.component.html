@@ -1,0 +1,6 @@
+<h2>Hotels:</h2>
+<h4 *ngIf="!isAuthenticated()">Hello, Guest, please <a (click)="authenticate($event)" href="">authenticate</a> to book hotels</h4>
+<h4 *ngIf="isAuthenticated()">Hello, {{user.firstname}} {{user.lastname}}</h4>
+<ul>
+  <app-single-hotel-list-item *ngFor="let hotel of hotels" [hotel]="hotel"></app-single-hotel-list-item>
+</ul>
